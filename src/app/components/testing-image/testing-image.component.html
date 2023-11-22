@@ -1,0 +1,6 @@
+<div>
+    <label >Enter Image path and name:</label>
+    <input [(ngModel)]="imageUrl" />
+    <br/>
+    <img [src]="imageUrl | defaultImage" />
+  </div>

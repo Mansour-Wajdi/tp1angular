@@ -1,0 +1,20 @@
+<div>
+
+    <p [ngStyle]="{ 'color': fontColor, 'font-size.px': fontSize, 'font-family': selectedFont }">
+        Test
+    </p>
+
+    <label>Couleur:</label>
+    <!-- <input type="text"  [(ngModel)]="fontColor"> -->
+    <input (change)="fontColor = monInput.value" type="text" #monInput /> 
+
+    <label >Taille de police:</label>
+    <input type="number"  [(ngModel)]="fontSize">
+
+  
+    <label>Police:</label>
+    <select  [(ngModel)]="selectedFont">
+      <option *ngFor="let font of fontList" [value]="font">{{ font }}</option>
+    </select>
+  </div>
+  
